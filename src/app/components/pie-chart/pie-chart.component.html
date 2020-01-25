@@ -1,0 +1,100 @@
+
+<div class="card chart-style">
+    <canvas baseChart
+      [data]="pieChartData"
+      [labels]="pieChartLabels"
+      [chartType]="pieChartType"
+      [options]="pieChartOptions"
+      [legend]="pieChartLegend">
+    </canvas>
+    <!-- [colors]="pieChartColors" -->
+
+  </div>
+
+  <div class="mt-3">
+
+    <h2>Pie Chart</h2>
+    <br>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#html">Html</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#css-style">Style</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#typescript">Typescript</a>
+      </li>
+      
+    </ul>
+  
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div id="html" class="container tab-pane active "><br> 
+<pre>
+&lt;div class="card chart-style"&gt;
+    &lt;canvas baseChart
+        [data]="pieChartData"
+        [labels]="pieChartLabels"
+        [chartType]="pieChartType"
+        [options]="pieChartOptions"
+        [legend]="pieChartLegend"&gt;
+    &lt;/canvas&gt;
+&lt;/div&gt;
+</pre>
+
+        </div>
+        <!-- <div id="css-style" class="container tab-pane active "><br>
+<pre>
+.chart-style &#x0007b;
+    display: block;
+    padding: 5px;
+    padding-top: 2%;
+    top: auto;
+    margin-top: 2%;
+&#x0007d;
+</pre>
+        </div> -->
+        <div id="typescript" class="container tab-pane fade"><br>
+<pre>
+import &#x0007b; Component, OnInit &#x0007d; from '&#x00040;angular/core';
+
+&#x00040;Component(&#x0007b;
+    selector: 'app-pie-chart',
+    templateUrl: './pie-chart.component.html',
+    styleUrls: ['./pie-chart.component.css']
+    &#x0007d;)
+export class PieChartComponent implements OnInit &#x0007b;
+    
+    public pieChartOptions = &#x0007b;
+    responsive: true,
+    legend: &#x0007b;
+      position: 'top',
+      &#x0007d;
+        
+      &#x0007d;;
+    public pieChartLabels = [['Download', 'Sales'], ['In', 'Store', 'Sales'], 'Mail Sales'];
+    public pieChartData = [300, 350, 120];
+    public pieChartType = 'pie';
+    public pieChartLegend = true;
+    
+    public pieChartColors = [
+    &#x0007b;
+        backgroundColor: ['rgba(255,0,0,0.4)', 'rgba(0,255,0,0.4)', 'rgba(0,0,255,0.4)'],
+    &#x0007d;,
+    ];
+    
+    constructor() &#x0007b; &#x0007d;
+    
+    ngOnInit() &#x0007b;
+    &#x0007d;
+    
+&#x0007d;  
+</pre> 
+        </div>
+      
+    </div>
+  
+  
+</div>

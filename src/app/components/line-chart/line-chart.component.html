@@ -1,0 +1,108 @@
+<div class="card chart-style">
+    <canvas baseChart 
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType">
+            </canvas>
+                <!-- [colors]="lineChartColors" -->
+ </div>
+
+ <div class="mt-3">
+
+    <h2>Line Chart</h2>
+    <br>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#html">Html</a>
+      </li>
+
+      <!-- <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#css-style">Style</a>
+      </li> -->
+
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#typescript">Typescript</a>
+      </li>
+      
+    </ul>
+  
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div id="html" class="container tab-pane active "><br> 
+<pre>
+&lt;div class="card chart-style"&gt;
+    &lt;canvas baseChart
+        [datasets]="lineChartData"
+        [labels]="lineChartLabels"
+        [options]="lineChartOptions"
+        [legend]="lineChartLegend"
+        [chartType]="lineChartType"&gt;
+    &lt;/canvas&gt;
+&lt;/div&gt;
+</pre>
+
+        </div>
+        <!-- <div id="css-style" class="container tab-pane active "><br>
+<pre>
+.chart-style &#x0007b;
+    display: block;
+    padding: 5px;
+    padding-top: 2%;
+    top: auto;
+    margin-top: 2%;
+&#x0007d;
+</pre>
+        </div> -->
+        <div id="typescript" class="container tab-pane fade"><br>
+<pre>
+import &#x0007b; Component, OnInit &#x0007d; from '&#x00040;angular/core';
+
+&#x00040;Component(&#x0007b;
+    selector: 'app-line-chart',
+    templateUrl: './line-chart.component.html',
+    styleUrls: ['./line-chart.component.css']
+    &#x0007d;)
+export class LineChartComponent implements OnInit &#x0007b;
+    
+    public lineChartData = [
+    &#x0007b; data: [65, 59, 68, 81, 56, 55, 40], label: 'Series A' &#x0007d;,
+    &#x0007b; data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' &#x0007d;,
+    &#x0007b; data: [58, 48, 50, 29, 56, 39, 80], label: 'Series C' &#x0007d;
+        
+    ];
+    public lineChartLabels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+    public lineChartOptions  = &#x0007b;
+        responsive: true,
+        scales: &#x0007b;
+        // We use this empty structure as a placeholder for dynamic theming.
+        xAxes: [&#x0007b;&#x0007d;],
+        yAxes: [
+        &#x0007b;
+            id: 'y-axis-0',
+            position: 'left',
+            &#x0007d;
+        ]
+        &#x0007d;
+        
+        &#x0007d;;
+        
+    public lineChartLegend = true;
+    public lineChartType = 'line';
+        
+        
+    constructor() &#x0007b; &#x0007d;
+        
+    ngOnInit() &#x0007b;
+    &#x0007d;
+    
+&#x0007d;    
+</pre> 
+        </div>
+      
+    </div>
+  
+  
+</div>

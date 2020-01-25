@@ -1,0 +1,84 @@
+
+<div class="card chart-style">
+    <canvas baseChart
+      [data]="doughnutChartData"
+      [labels]="doughnutChartLabels"
+      [chartType]="doughnutChartType">
+    </canvas>
+  </div>
+
+  <div class="mt-3">
+
+    <h2>Doughnut Chart</h2>
+    <br>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#html">Html</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#css-style">Style</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#typescript">Typescript</a>
+      </li>
+      
+    </ul>
+  
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div id="html" class="container tab-pane active "><br> 
+<pre>
+&lt;div class="card chart-style"&gt;
+    &lt;canvas baseChart
+        [data]="doughnutChartData"
+        [labels]="doughnutChartLabels"
+        [chartType]="doughnutChartType"&gt;
+    &lt;/canvas&gt;
+&lt;/div&gt;
+</pre>
+
+        </div>
+        <!-- <div id="css-style" class="container tab-pane active "><br>
+<pre>
+.chart-style &#x0007b;
+    display: block;
+    padding: 5px;
+    padding-top: 2%;
+    top: auto;
+    margin-top: 2%;
+&#x0007d;
+</pre>
+        </div> -->
+        <div id="typescript" class="container tab-pane fade"><br>
+<pre>
+import &#x0007b; Component, OnInit &#x0007d; from '&#x00040;@angular/core';
+
+&#x00040;Component(&#x0007b;
+    selector: 'app-doughnut-chart',
+    templateUrl: './doughnut-chart.component.html',
+    styleUrls: ['./doughnut-chart.component.css']
+    &#x0007d;)
+export class DoughnutChartComponent implements OnInit &#x0007b;
+    
+    public doughnutChartLabels = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
+    public doughnutChartData=  [
+        [350, 450, 100],
+        [50, 150, 120],
+        [250, 130, 70],
+    ];
+    public doughnutChartType = 'doughnut';
+    
+    constructor() &#x0007b; &#x0007d;
+    
+    ngOnInit() &#x0007b;
+    &#x0007d;
+    
+&#x0007d;       
+</pre> 
+        </div>
+      
+    </div>
+  
+  
+</div>

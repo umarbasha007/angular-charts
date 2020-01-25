@@ -1,0 +1,101 @@
+<div class="card chart-style">
+    <canvas baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+     
+      [legend]="barChartLegend"
+      [chartType]="barChartType">
+    </canvas>
+  
+</div>
+
+<div class="mt-3">
+
+    <h2>Bar Chart</h2>
+    <br>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#html">Html</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#css-style">Style</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#typescript">Typescript</a>
+      </li>
+      
+    </ul>
+  
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div id="html" class="container tab-pane active "><br> 
+<pre>
+&lt;div class="card chart-style"&gt;
+    &lt;canvas baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [legend]="barChartLegend"
+        [chartType]="barChartType"&gt;
+    &lt;/canvas&gt;
+&lt;/div&gt;
+</pre>
+
+        </div>
+        <!-- <div id="css-style" class="container tab-pane active "><br>
+<pre>
+.chart-style &#x0007b;
+    display: block;
+    padding: 5px;
+    padding-top: 2%;
+    top: auto;
+    margin-top: 2%;
+&#x0007d;
+</pre>
+        </div> -->
+        <div id="typescript" class="container tab-pane fade"><br>
+<pre>
+import &#x0007b; Component, OnInit &#x0007d; from '&#x00040;angular/core';
+
+&#x00040;Component(&#x0007b;
+    selector: 'app-bar-chart',
+    templateUrl: './bar-chart.component.html',
+    styleUrls: ['./bar-chart.component.css']
+    &#x0007d;)
+export class BarChartComponent implements OnInit &#x0007b;
+    
+    
+    public barChartOptions=  &#x0007b;
+    responsive: true,
+    // We use these empty structures as placeholders for dynamic theming.
+    scales: &#x0007b; xAxes: [&#x0007b;&#x0007d;], yAxes: [&#x0007b;&#x0007d;] &#x0007d;,
+            
+    &#x0007d;;
+    
+    public barChartLabels  = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+    public barChartType = 'bar';
+    public barChartLegend = true;
+     
+    public barChartData = [
+    &#x0007b; data: [65, 59, 80, 81, 56, 55, 40], label: 'Company A' &#x0007d;,
+    &#x0007b; data: [28, 48, 40, 19, 86, 27, 90], label: 'Company B' &#x0007d;
+    ];
+    
+    constructor() &#x0007b; &#x0007d;
+    
+    ngOnInit() &#x0007b;
+    &#x0007d;
+    
+&#x0007d;
+        
+    
+</pre> 
+        </div>
+      
+    </div>
+  
+  
+</div>
+
